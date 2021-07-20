@@ -1,1 +1,15 @@
-<p>node works!</p>
+<input
+  type="checkbox"
+  [checked]="node.checked"
+>
+<label>{{ node.name }}</label>
+
+<div
+  *ngIf="node.children.length > 0"
+  class="node"
+>
+  <node
+    [node]="item"
+    *ngFor="let item of node.children">
+  </node>
+</div>

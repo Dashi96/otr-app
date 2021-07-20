@@ -1,0 +1,15 @@
+.node {
+  margin: 20px 0 20px 40px;
+}
+
+label {
+  font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+  margin: .4rem;
+}
+
+input:hover {
+  cursor: pointer;
+}
