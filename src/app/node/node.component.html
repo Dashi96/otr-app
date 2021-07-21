@@ -1,15 +1,20 @@
-<input
-  type="checkbox"
-  [checked]="node.checked"
->
-<label>{{ node.name }}</label>
+<ul>
+  <li>
+    <input
+      type="checkbox"
+      [name]="node.name"
+      [id]="node.name"
+    >
+    <label [for]="node.name">{{ node.name }}</label>
 
-<div
-  *ngIf="node.children.length > 0"
-  class="node"
->
-  <node
-    [node]="item"
-    *ngFor="let item of node.children">
-  </node>
-</div>
+    <ng-container
+      *ngIf="node.children.length"
+    >
+      <node
+        [node]="item"
+        *ngFor="let item of node.children"
+      >
+      </node>
+    </ng-container>
+  </li>
+</ul>
